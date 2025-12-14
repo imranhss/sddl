@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Standard Design and Development Ltd.</title>
+    <link rel="shortcut icon" href="images/logo/SDDL-Logo-600x284.png" type="image/x-icon">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <!-- Navbar -->
+        <header class="navbar-wrap">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo/SDDL-Logo-600x284.png" alt="" width="20%"></a>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <div class="dropdown">
+                        <a href="#projects" class="dropdown-toggle">Project ▾</a>
+                        <div class="dropdown-menu">
+                            <a href="ongoing-project.html">Ongoing</a>
+                            <a href="upcoming-project.html">Upcoming</a>
+                            <a href="#handover">Hand Over</a>
+                        </div>
+                    </div>
+
+                    <a href="about_us.html">About Us</a>
+                    <a href="contatct.html">Contact</a>
+                    <a href="#gallery">Gallery</a>
+                </nav>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+    </header>
+
+    <div class="hero-wrap">
+        <div class="revo swiper-container">
+            <div class="swiper-wrapper">
+
+                <!-- Slide A -->
+                <div class="swiper-slide slide" data-bg="img1.jpg">
+                    <!-- Background Layer -->
+                    <div class="bg-layer" data-speed="0.08"
+                        style="background-image:url('images/slide/Morning-Dew.jpg')"></div>
+                    <div class="mid-layer" data-speed="0.18"
+                        style="background-image:url('images/slide/Noor-Manjil-Slide.jpg')"></div>
+                    <div class="dark-overlay"></div>
+
+                    <div class="slide-content">
+                        <span class="eyebrow"></span>
+                        <h2 class="title" data-split>Standard</h2>
+                        <h2 class="title" data-split>Morning Dew</h2>
+                        <p class="subtitle">Thoughtfully designed living spaces with panoramic views, premium finishes,
+                            and smart home features — close to everything you love.</p>
+
+                        <div style="height:18px"></div>
+
+                        <div class="cta-row">
+                            <a class="btn-primary" href="#projects">See More</a>
+                            <!-- <a class="btn-ghost" href="#contact">Contact Sales</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Foreground shapes -->
+                    <div class="fg-shape shape-1" data-speed="0.25"></div>
+                    <div class="fg-shape shape-2" data-speed="0.12"></div>
+                </div>
+
+                <!-- Slide B -->
+                <div class="swiper-slide slide" data-bg="img2.jpg">
+                    <div class="bg-layer" data-speed="0.06"
+                        style="background-image:url('images/slide/Noor-Manjil-Slide.jpg')"></div>
+                    <div class="mid-layer" data-speed="0.16"
+                        style="background-image:url('images/slide/Noor-Manjil-Slide.jpg')"></div>
+                    <div class="dark-overlay"></div>
+
+                    <div class="slide-content">
+                        <span class="eyebrow"></span>
+                        <h2 class="title" data-split>Standard </h2>
+                        <h2 class="title" data-split>Noor Manjil</h2>
+                        <p class="subtitle">Live at the pulse of the city with rooftop amenities, bespoke interiors, and
+                            seamless connectivity to transit & culture.</p>
+
+                        <div style="height:18px"></div>
+
+                        <div class="cta-row">
+                            <a class="btn-primary" href="#projects">See More</a>
+                            <!-- <a class="btn-ghost" href="#contact">Contact Sales</a> -->
+                        </div>
+                    </div>
+
+                    <div class="fg-shape shape-1" data-speed="0.25"></div>
+                    <div class="fg-shape shape-2" data-speed="0.12"></div>
+                </div>
+
+                <!-- Slide C -->
+                <div class="swiper-slide slide" data-bg="img3.jpg">
+                    <div class="bg-layer" data-speed="0.07"
+                        style="background-image:url('images/slide/shondha-maloti.jpg')"></div>
+                    <div class="mid-layer" data-speed="0.14"
+                        style="background-image:url('images/slide/shondha-maloti.jpg')"></div>
+                    <div class="dark-overlay"></div>
+
+                    <div class="slide-content">
+                        <span class="eyebrow"></span>
+                        <h2 class="title" data-split>Standard</h2>
+                        <h2 class="title" data-split>Shondha Maloti</h2>
+                        <p class="subtitle">Private terraces, sunlit interiors and breezy landscaping — exclusive villas
+                            designed for relaxation and refined living.</p>
+
+                        <div style="height:18px"></div>
+
+                        <div class="cta-row">
+                            <a class="btn-primary" href="#projects">See More</a>
+                            <!-- <a class="btn-ghost" href="#contact">Contact Sales</a> -->
+                        </div>
+                    </div>
+
+                    <div class="fg-shape shape-1" data-speed="0.25"></div>
+                    <div class="fg-shape shape-2" data-speed="0.12"></div>
+                </div>
+                <!-- Slide D -->
+                <div class="swiper-slide slide" data-bg="img3.jpg">
+                    <div class="bg-layer" data-speed="0.07"
+                        style="background-image:url('images/slide/Standard-Hazi-Abdul-Kader-Palace-Slide.jpg')"></div>
+                    <div class="mid-layer" data-speed="0.14"
+                        style="background-image:url('images/slide/Standard-Hazi-Abdul-Kader-Palace-Slide.jpg')"></div>
+                    <div class="dark-overlay"></div>
+
+                    <div class="slide-content">
+                        <span class="eyebrow"></span>
+                        <h2 class="title" data-split>Standard</h2>
+                        <h2 class="title" data-split>Hazi Abdul Kader Palace</h2>
+                        <p class="subtitle">Private terraces, sunlit interiors and breezy landscaping — exclusive villas
+                            designed for relaxation and refined living.</p>
+
+                        <div style="height:18px"></div>
+
+                        <div class="cta-row">
+                            <a class="btn-primary" href="#projects">See More</a>
+                            <!-- <a class="btn-ghost" href="#contact">Contact Sales</a> -->
+                        </div>
+                    </div>
+
+                    <div class="fg-shape shape-1" data-speed="0.25"></div>
+                    <div class="fg-shape shape-2" data-speed="0.12"></div>
+                </div>
+                <!-- Slide E -->
+                <div class="swiper-slide slide" data-bg="img3.jpg">
+                    <div class="bg-layer" data-speed="0.07"
+                        style="background-image:url('images/slide/Standard-Rabeya-Palace.jpg')"></div>
+                    <div class="mid-layer" data-speed="0.14"
+                        style="background-image:url('images/slide/Standard-Rabeya-Palace.jpg')"></div>
+                    <div class="dark-overlay"></div>
+
+                    <div class="slide-content">
+                        <span class="eyebrow"></span>
+                        <h2 class="title" data-split>Standard</h2>
+                        <h2 class="title" data-split>Standard Rabeya Palace</h2>
+                        <p class="subtitle">Private terraces, sunlit interiors and breezy landscaping — exclusive villas
+                            designed for relaxation and refined living.</p>
+
+                        <div style="height:18px"></div>
+
+                        <div class="cta-row">
+                            <a class="btn-primary" href="#projects">See More</a>
+                            <!-- <a class="btn-ghost" href="#contact">Contact Sales</a> -->
+                        </div>
+                    </div>
+
+                    <div class="fg-shape shape-1" data-speed="0.25"></div>
+                    <div class="fg-shape shape-2" data-speed="0.12"></div>
+                </div>
+
+            </div>
+
+            <!-- pagination + nav -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="aboutus">
+        <div class="about-container">
+            <h2 class="about-title">About Standard Design and Development Limited</h2>
+            <p class="about-text">
+                Standard Design and Development Limited started its journey in the Real Estate sector of Bangladesh to
+                fulfill your desired home within your capacity and the shortest possible time with dedication to merging
+                value and innovation.
+                <br><br>
+                Standard Design and Development Limited is committed to satisfying valued customers through honesty,
+                trust, faith, quality, and commitment. Each project is executed with innovative planning and detailed
+                precision by a group of unique professionals and dynamic experts, who are working to fulfil the highest
+                level of satisfaction to its valued customers.
+                <br><br>
+                In view of the sprawling population growth of the country, limitations in the availability of lands and
+                open spaces in residential areas, they put substantial emphasis on conserving spaces and resources;
+                bringing out the components of nature in building infrastructures.
+                <br><br>
+                SDDL delivers you the promised brands, unparalleled quality features, and true value for money that
+                create aesthetically pleasing, comfortable, and luxurious habitats for living.
+            </p>
+        </div>
+    </section>
+
+
+
+
+    <!-- Core Values Section -->
+    <section class="core-values" id="corevalues">
+        <div class="core-container">
+            <h2 class="core-title">Our Core Values</h2>
+            <div class="core-cards">
+                <!-- Card 1 -->
+                <div class="core-card">
+                    <div class="core-icon">🏆</div>
+                    <h3>Quality</h3>
+                    <p>Standard Design and Development Limited is committed to satisfy valued customers with a high
+                        quality of materials in every aspect to ensure the best comfortable and luxury life for the
+                        clients, land owners, and our own peace of mind.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="core-card">
+                    <div class="core-icon">📦</div>
+                    <h3>Handover</h3>
+                    <p>When the time comes for handover we pledge to facilitate a smooth and efficient transition
+                        promptly and accurately by ensuring ready to live within committed time frame.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="core-card">
+                    <div class="core-icon">🛡️</div>
+                    <h3>Safety</h3>
+                    <p>Safety has been always our utmost priority. We adhere to stringent safety protocols and best
+                        practices to ensure a secure environment for our clients and employees.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="core-card">
+                    <div class="core-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Our expertise lies not only in showcasing exceptional properties but also in identifying prime
+                        locations that align with our clients preferences, ensuring they find not just a home, but a
+                        home in an area that meets their lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Ongoing Projects Section -->
+    <section class="ongoing-projects" id="projects">
+        <div class="projects-container">
+            <h2 class="projects-title">Ongoing Projects</h2>
+            <div class="projects-cards">
+
+                <!-- Card 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ongoing/Rabeya_place.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <h3>Standard Rabeya Palace</h3>
+                            <p>Ongoing</p>
+                        </div>
+                    </div>
+                    <p class="project-text">Standard Rabeya Palace is a luxurious apartment project with a west –
+                        facing orientation that is located in South Madartek. For the best residential living where one
+                        can spend time with friends and family,</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ongoing/Noor-Manjil-Brochure_output-06.png" alt="Project 2">
+                        <div class="project-overlay">
+                            <h3>Standard Noor Manzil</h3>
+                            <p>Ongoing</p>
+                        </div>
+                    </div>
+                    <p class="project-text">Standard Noor Manzil is a luxurious apartment project situated 445/2 East
+                        Goran, Khilgoan, Shabujbag, Dhaka. It’s a 3 unit residential Apartment, Facing North, Type A,
+                        Type B and Type C. Number of flats is</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ongoing/shondha-maloti1-scaled.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Standard Shondha Maloti</h3>
+                            <p>Ongoing</p>
+                        </div>
+                    </div>
+                    <p class="project-text">Standard Shondha Maloti is a Luxurious Apartment Project is situated Road
+                        17, Block C-Extension, Banasree, Dhaka. 4 unit building, facing west, Type A, B, C, D. Number of
+                        flat 36. The apartment of this</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ongoing/Madhobi-Lota-scaled.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Standard Madhobi Lata</h3>
+                            <p>Ongoing</p>
+                        </div>
+                    </div>
+                    <p class="project-text">Standard Madhobilata is a Luxurious Apartment Project is situated Road 17,
+                        Block C- Extension, Banasree, Dhaka. 4 unit building, facing east, Type A, B, C, D. Number of
+                        flat 36. The apartment of this</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ongoing/Standard-Hazi-Abdul-Kader-Palace-3-scaled.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Standard Hazi Abdul Kader Palace</h3>
+                            <p>Ongoing</p>
+                        </div>
+                    </div>
+                    <p class="project-text">Standard Hazi Abdul Kader Palace is a Luxurious Apartment Project situated
+                        holding no 184-185, Shantibag, Malibag, Dhaka – 1217. Double unit building, facing south, Type A
+                        & B. Number of flat 16. The apartment</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ongoing/Standard_Morning_Dew.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Standard Morning Dew</h3>
+                            <p>Ongoing</p>
+                        </div>
+                    </div>
+                    <p class="project-text">Standard Morning Dew is a Luxurious Apartment Project situated plot 51, Road
+                        02, Block F, Sector 1, Dhaka. Single unit building, facing north, Type A. Number of flat 6. The
+                        apartment of this project</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- UpComing Projects Section -->
+    <section class="ongoing-projects" id="projects">
+        <div class="projects-container">
+            <h2 class="projects-title">Upcomming Project</h2>
+            <div class="projects-cards">
+
+                <!-- Card 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/upcoming/rokto-korobi-scaled.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <h3>Standard Roktokorobi</h3>
+                            <p>Upcomming Project</p>
+                        </div>
+                    </div>
+                    <p class="project-text">Standard Roktokorobi is a Luxurious Apartment Project is situated Road 17,
+                        Block C – Extension, Banasree, Dhaka. Double unit building, facing west, Type A &amp; B. Number
+                        of flat 18. Apartment of this project</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/upcoming/Standard_Oporajita.jpg" alt="Project 2">
+                        <div class="project-overlay">
+                            <h3>Standard Oporajita</h3>
+                            <p>Upcomming Project</p>
+                        </div>
+                    </div>
+                    <p class="project-text"> Standard Oporajita is a Luxurious Apartment Project is situated Road 17,
+                        Block C – Extension, Banasree, Dhaka. Double unit building, facing East, Type A &amp; B. Number
+                        of flat 18. The apartment of this</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/upcoming/Standard_Chandra_Mallika.png" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Standard Chandra Mallika</h3>
+                            <p>Upcomming Project</p>
+                        </div>
+                    </div>
+                    <p class="project-text"> Standard Chandra Mallika a modern maine home fringed by the atlantic ocean
+                        Address-Road 17, Block – C (Extension), Banasree, Dhaka. Your Content Goes Here </p>
+                </div>
+                <!-- Card 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/upcoming/Standard_Krishno_Chura.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Standard Krishno Chura</h3>
+                            <p>Upcomming Project</p>
+                        </div>
+                    </div>
+                    <p class="project-text"> Standard Krishno Chura a modern maine home fringed by the atlantic ocean
+                        Address: Road 17, Block – C (Extension), Banasree, Dhaka. Your Content Goes Here</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/upcoming/Standard_Chowdhury_Villa.jpg" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Standard Chowdhury Villa</h3>
+                            <p>Upcomming Project</p>
+                        </div>
+                    </div>
+                    <p class="project-text"> Standard Chowdhury Villa a modern maine home fringed by the atlantic ocean
+                        Address: Plot – 42, Road – 7, Sector – 2, Block – H, Aftabnagar.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/upcoming/Standard_Maryam_Lodge.webp" alt="Project 3">
+                        <div class="project-overlay">
+                            <h3>Standard Maryam Lodge</h3>
+                            <p>Upcomming Project</p>
+                        </div>
+                    </div>
+                    <p class="project-text"> Standard Maryam Lodge a modern maine home fringed by the atlantic ocean Get
+                        a free quote Plot – 43, Road – 6, Sector – 2, Block</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1: About -->
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>We are specialists in the construction of unique and exclusive properties. Our work inspires. We
+                    pride ourselves on delivering outstanding quality and design for leading clients across the world.
+                </p>
+            </div>
+
+            <!-- Column 2: Contact -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><strong>Standard Design and Development Ltd.</strong></p>
+                <p>Flat-9-D, E, 9th Floor, House No. 42/43, Fahima Tower, Purana Paltan, Dhaka 1000</p>
+                <p>📞 02-223389393</p>
+                <p>📱 01324291998, 01324291997</p>
+                <p>✉️ <a href="mailto:sddl.info@gmail.com">sddl.info@gmail.com</a></p>
+                <p>🕘 Saturday-Thursday: 9:30 AM – 6:30 PM</p>
+            </div>
+
+            <!-- Column 3: Location Map -->
+            <div class="footer-col">
+                <h3>Our Location</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.12228087504!2d90.40978550905221!3d23.731663478594218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f615f23769%3A0x49a9ec7152205284!2sStandard%20Design%20%26%20Development%20LTD.!5e1!3m2!1sen!2sbd!4v1765483996733!5m2!1sen!2sbd"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </div>
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+            <a href="https://www.facebook.com/sddlbd22" target="_blank" class="social-icon"><i
+                    class="fab fa-facebook-f"></i></a>
+            <!-- <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a> -->
+            <a href="https://www.instagram.com/s_d_d_l/" target="_blank" class="social-icon"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Standard Design and Development Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/nav.js"></script>
+
+
+</body>
+
+</html>

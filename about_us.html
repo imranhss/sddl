@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Upcoming Projects | Standard Design and Development Ltd.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slider.css">
+
+  <style>
+    /* ================= STATIC BANNER ================= */
+    .banner {
+      height: 65vh;
+      margin-top: 75px;
+      background: url('images/anout.avif') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+
+    }
+
+    .banner-content {
+      position: relative;
+      text-align: center;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    .banner-content h1 {
+      font-size: 52px;
+      color: var(--accent);
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .banner-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    /* ================= UPCOMING PROJECT CARDS ================= */
+    .projects {
+      max-width: 1400px;
+      margin: auto;
+      padding: 100px 20px;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 60px;
+      color: var(--accent);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      transition: 0.4s;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: 0.6s;
+      filter: grayscale(30%);
+    }
+
+    .project-info {
+      padding: 22px;
+    }
+
+    .project-info h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .project-info p {
+      font-size: 15px;
+      color: #ddd;
+      line-height: 1.7;
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: 0.4s;
+      text-align: center;
+    }
+
+    .project-overlay h3 {
+      color: var(--accent);
+      margin-bottom: 6px
+    }
+
+    .project-overlay span {
+      font-size: 15px;
+      color: #eee
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+      filter: grayscale(0)
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1
+    }
+
+    .md-message {
+      padding: 100px 20px;
+      background: #0a0a0c;
+    }
+
+    .md-container {
+      max-width: 1400px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    /* IMAGE COLUMN */
+    .md-image-box {
+      position: relative;
+    }
+
+    .md-image-box img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .md-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 15px 20px;
+      border-radius: 14px;
+    }
+
+    .md-caption h3 {
+      color: #ffd64a;
+      margin-bottom: 5px;
+    }
+
+    .md-caption span {
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    /* TEXT COLUMN */
+    .md-text h2 {
+      font-size: 38px;
+      color: #ffd64a;
+      margin-bottom: 25px;
+    }
+
+    .md-text p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #e0e0e0;
+      text-align: justify;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:992px) {
+      .md-container {
+        grid-template-columns: 1fr;
+      }
+
+      .md-text h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+     <header>
+        <!-- Navbar -->
+        <header class="navbar-wrap">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo/SDDL-Logo-600x284.png" alt="" width="20%"></a>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <div class="dropdown">
+                        <a href="#projects" class="dropdown-toggle">Project ▾</a>
+                        <div class="dropdown-menu">
+                            <a href="ongoing-project.html">Ongoing</a>
+                            <a href="upcoming-project.html">Upcoming</a>
+                            <a href="#handover">Hand Over</a>
+                        </div>
+                    </div>
+
+                    <a href="about_us.html">About Us</a>
+                    <a href="contatct.html">Contact</a>
+                    <a href="#gallery">Gallery</a>
+                </nav>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+    </header>
+
+
+  <section class="banner">
+    <div class="banner-content">
+      <h1>About Us</h1>
+      
+    </div>
+  </section>
+
+
+  <section class="md-message">
+    <div class="md-container">
+
+      <div class="md-image-box">
+        <img src="images/about/md.jpg" alt="Managing Director">
+        <div class="md-caption">
+          <h3>Managing Director</h3>
+          <span>Standard Design & Development Ltd.</span>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="md-text">
+        <h2>Message from the Managing Director</h2>
+
+        <p>
+          Ladies and Gentlemen,
+          <br><br>
+          I am honored to stand before you as the Managing Director of Standard Design and Development Ltd, a
+          distinguished real estate firm committed to excellence, innovation, and unparalleled service. Today marks a
+          significant milestone for us as we launch our new website, a virtual gateway that reflects our dedication to
+          progress and the evolving needs of our valued clients.
+          <br><br>
+          In the dynamic world of real estate, where trends change and technology continues to redefine the landscape,
+          having a robust online presence is essential. Our new website is more than just a digital platform; it is a
+          testament to our unwavering commitment to providing you with the best possible experience in your real estate
+          journey.
+          <br><br>
+          At Standard Design and Development Ltd., we understand that buying, selling, or investing in real estate is
+          not merely a transaction—it’s a pivotal moment in your life. It’s about finding a place to call home, a space
+          to build dreams, or an investment to secure your future.
+          <br><br>
+          Our team, consisting of seasoned professionals and experts in the field, is dedicated to guiding you through
+          every step of this journey.
+          <br><br>
+          The new website is designed with you in mind. It’s a user-friendly interface that offers seamless navigation,
+          empowering you with the tools and information needed to make informed decisions.
+          <br><br>
+          Furthermore, our commitment to innovation is reflected in the incorporation of cutting-edge technology on our
+          platform. You can explore virtual property tours, access 3D floor plans, and leverage advanced search features
+          to find the perfect property tailored to your requirements.
+          <br><br>
+          Standard Design and Development Ltd. has always been synonymous with quality, integrity, and trust. Our
+          website is an extension of these values, aiming to foster transparency and openness in our interactions with
+          you.
+          <br><br>
+          As we embark on this digital journey, I would like to express my deepest gratitude to our clients, partners,
+          and the entire Standard Design and Development Ltd. team for their unwavering support.
+          <br><br>
+          Thank you.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- out Team -->
+  <section>
+    <section class="team-section">
+
+      <h2 class="section-title">Hr & Admin</h2>
+
+
+      <div class="team-container">
+
+
+        <!-- CARD 1 -->
+        <div class="team-card">
+          <div class="team-img">
+            <img src="images/about/Rajib-Chandra-Ghosh-Sr-Executive-Finance-Accounts-400x529.jpg"
+              alt="Rajib Chandra Ghosh">
+            <div class="team-social">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>Rajib Chandra Ghosh</h3>
+            <p>Sr. Executive, Finance & Accounts</p>
+            <p>Mobile: 01324291990</p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="team-card">
+          <div class="team-img">
+            <img src="images/about/Nikunja-Chandra-Das-400x496.jpg" alt="Employee Name">
+            <div class="team-social">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>Nikunja Chandra Das</h3>
+            <p>Sr. Executive, Procurement</p>
+            <p>Mobile : 01324291992</p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="team-card">
+          <div class="team-img">
+            <img src="images/about/Md.-Rupchan-400x486.jpg" alt="Employee Name">
+            <div class="team-social">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>Md. Rupchan</h3>
+            <p>Driver, HR & Admin</p>
+            <p>Mobile: 01324291994</p>
+          </div>
+        </div>
+        <!-- CARD 4-->
+        <div class="team-card">
+          <div class="team-img">
+            <img src="images/about/Md.Sharif-Ali.jpg" alt="Employee Name">
+            <div class="team-social">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>Md.Sharif (Ali)</h3>
+            <p>Office Asst, HR & Admin</p>
+            <p>Mobile: 01324291991</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+
+  <section>
+    <section class="team-section">
+
+      <h2 class="section-title">Sales & Marketing</h2>
+
+
+      <div class="team-container">
+
+
+        <!-- CARD 1 -->
+        <div class="team-card">
+          <div class="team-img">
+            <img src="images/about/sales/Sharif-Ahmed-400x466.jpg" alt="Rajib Chandra Ghosh">
+            <div class="team-social">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>Sharif Ahmed</h3>
+            <p>Manager, Sales & Marketing</p>
+            <p>Mobile: 01324291998</p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="team-card">
+          <div class="team-img">
+            <img src="images/about/sales/Md.Kamruzzaman-Milon-400x400.jpg" alt="Employee Name">
+            <div class="team-social">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>Md. Kamruzzaman Milon</h3>
+            <p>Deputy Manager, Sales & Marketing</p>
+            <p>Mobile: 01324291997</p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="team-card">
+          <div class="team-img">
+            <img src="images/about/sales/Md.Abul-Fazal.jpg" alt="Employee Name">
+            <div class="team-social">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>Md. Abul Fazal</h3>
+            <p>Sr. Executive, Sales & Marketing</p>
+            <p>Mobile: 01324735624</p>
+          </div>
+        </div>
+        <!-- CARD 4-->
+        <div class="team-card">
+          <div class="team-img">
+            <img src="images/about/sales/Samiul-alam-Sakib.jpg" alt="Employee Name">
+            <div class="team-social">
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="team-info">
+            <h3>Samiul Alam Sakib</h3>
+            <p>Executive, Sales & Marketing</p>
+            <p>Mobile: 01324735622</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+
+
+  <section class="team-section">
+
+    <h2 class="section-title">Constrauction & Engineer</h2>
+
+
+    <div class="team-container">
+
+
+      <!-- CARD 1 -->
+      <div class="team-card">
+        <div class="team-img">
+          <img src="images/about/cons/Md.-Ashikur-Rahman-400x500.jpg" alt="Rajib Chandra Ghosh">
+          <div class="team-social">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="team-info">
+          <h3>Md. Ashikur Rahaman</h3>
+          <p>Project Engineer, Construction</p>
+          <p>Mobile: 01324291995</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="team-card">
+        <div class="team-img">
+          <img src="images/about/cons/Md.-Masud-Mia-Site-Engineer-Construction-400x501.jpg" alt="Employee Name">
+          <div class="team-social">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="team-info">
+          <h3>Md. Masud Mia</h3>
+          <p>Site Engineer, Construction</p>
+          <p>Mobile: 01324291993</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="team-card">
+        <div class="team-img">
+          <img src="images/about/cons/Md.-Ubaidur-Rahman-Site-Engineer-Construction-400x501.jpg" alt="Employee Name">
+          <div class="team-social">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="team-info">
+          <h3>Md. Ubaidur Rahman</h3>
+          <p>Site Engineer, Construction</p>
+          <p>Mobile: 01324291996</p>
+        </div>
+      </div>
+      <!-- CARD 4-->
+      <div class="team-card">
+        <div class="team-img">
+          <img src="images/about/cons/Md.-Rasaduzzaman-Akondo-Robin-Site-Engineer-Construction-400x497.jpg" alt="Employee Name">
+          <div class="team-social">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="team-info">
+          <h3>Md. Rasaduzzaman Akondo (Robin)</h3>
+          <p>Site Engineer, Construction</p>
+          <p>Mobile: 01324735627</p>
+        </div>
+      </div>
+      <!-- CARD 5-->
+      <div class="team-card">
+        <div class="team-img">
+          <img src="images/about/cons/Monjur-Ahmed-Peal-.jpg" alt="Employee Name">
+          <div class="team-social">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="team-info">
+          <h3>Monjur Ahmed (Peal)</h3>
+          <p>Site Engineer, Construction</p>
+          <p>Mobile: 01324735626</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Column 1: About -->
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>We are specialists in the construction of unique and exclusive properties. Our work inspires. We
+          pride ourselves on delivering outstanding quality and design for leading clients across the world.
+        </p>
+      </div>
+
+      <!-- Column 2: Contact -->
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p><strong>Standard Design and Development Ltd.</strong></p>
+        <p>Flat-9-D, E, 9th Floor, House No. 42/43, Fahima Tower, Purana Paltan, Dhaka 1000</p>
+        <p>📞 02-223389393</p>
+        <p>📱 01324291998, 01324291997</p>
+        <p>✉️ <a href="mailto:sddl.info@gmail.com">sddl.info@gmail.com</a></p>
+        <p>🕘 Saturday-Thursday: 9:30 AM – 6:30 PM</p>
+      </div>
+
+      <!-- Column 3: Location Map -->
+      <div class="footer-col">
+        <h3>Our Location</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.12228087504!2d90.40978550905221!3d23.731663478594218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f615f23769%3A0x49a9ec7152205284!2sStandard%20Design%20%26%20Development%20LTD.!5e1!3m2!1sen!2sbd!4v1765483996733!5m2!1sen!2sbd"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+    <!-- Social Media Icons -->
+    <div class="footer-social">
+      <a href="https://www.facebook.com/sddlbd22" target="_blank" class="social-icon"><i
+          class="fab fa-facebook-f"></i></a>
+      <!-- <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a> -->
+      <a href="https://www.instagram.com/s_d_d_l/" target="_blank" class="social-icon"><i
+          class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Standard Design and Development Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+</body>
+
+</html>
